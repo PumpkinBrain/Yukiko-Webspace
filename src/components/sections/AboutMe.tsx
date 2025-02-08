@@ -1,10 +1,20 @@
 import React from "react";
+import styles from "@/styles/components/AboutMe.module.css";
+
 const AboutMeSection: React.FC = () => {
   return (
-    <div>
-      <h1>About Me</h1>
+    <div className={styles.aboutMe}>
+      <h2>About Me</h2>
       <img src="/profilepic.jpg"></img>
-      <p>blablabalbal</p>
+      <p>Hi! I am Yukiko and welcome to my site</p>
+      <p>I have many interests, which include:</p>
+      <ul>
+        <li>* programming and hacking</li>
+        <li>* videogames</li>
+        <li>* music</li>
+        <li>* alternative fashion</li>
+        <li>* internet and irl subcultures</li>
+      </ul>
     </div>
   );
 };

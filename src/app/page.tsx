@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <h1>{matrixText}</h1>
-      <AboutMeSection></AboutMeSection>
+      <AboutMeSection />
     </>
   );
 }

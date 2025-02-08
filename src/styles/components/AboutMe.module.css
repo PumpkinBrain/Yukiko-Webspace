@@ -1,0 +1,9 @@
+.aboutMe{
+    background-color: var(--section-box);
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutMe img{
+    max-width: 2em;
+}
