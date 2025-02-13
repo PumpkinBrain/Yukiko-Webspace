@@ -10,9 +10,9 @@ jobs:
 
     steps: 
       - name: checkout code
-        uses: actions/checkout
+        uses: actions/checkout@v4
       - name: set up code
-        uses: actions/setup-node
+        uses: actions/setup-node@v4
       - name: install dependencies
         run: npm install
       - name: run build script
