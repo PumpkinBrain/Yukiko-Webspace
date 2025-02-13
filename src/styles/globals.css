@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+li{
+  list-style-position: inside;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {

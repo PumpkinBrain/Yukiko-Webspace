@@ -1,6 +1,9 @@
 "use client";
 import AboutMeSection from "@/components/sections/AboutMe";
+import BlogsSection from "@/components/sections/Blogs";
+import UpdatesAndTodos from "@/components/sections/UpdatesAndTodos";
 import "@/styles/globals.css";
+import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -16,7 +19,7 @@ export default function Home() {
       setMatrixText((prev) =>
         prev
           .split("")
-          .map((char, index) =>
+          .map((_char, index) =>
             index < iteration
               ? targetText[index]
               : chars[Math.floor(Math.random() * chars.length)]
@@ -32,9 +35,14 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className={styles.main}>
       <h1>{matrixText}</h1>
-      <AboutMeSection />
-    </>
+      <div className={styles.sections}>
+        <AboutMeSection />
+        <h2 style={{ flex: 1 }}>Links navbar</h2>
+        <BlogsSection />
+        <UpdatesAndTodos />
+      </div>
+    </div >
   );
 }
