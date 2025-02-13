@@ -1,0 +1,10 @@
+.blogList{
+    flex: 1
+}
+
+.blogListItem{
+    background-color: #212121;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: var(--section-box);
+}
