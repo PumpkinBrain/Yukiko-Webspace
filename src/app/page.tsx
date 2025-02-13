@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
-    let targetText = pageTitle;
+    const targetText = pageTitle;
     let iteration = 0;
 
     const interval = setInterval(() => {
