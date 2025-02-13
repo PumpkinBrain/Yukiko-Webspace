@@ -23,5 +23,7 @@ jobs:
     needs: build
 
     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
       - name: print directories
-        run: ls
+        run: ls -a
