@@ -1,0 +1,19 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: checkout code
+        uses: actions/checkout
+      - name: set up code
+        uses: actions/setup-node
+      - name: install dependencies
+        run: npm install
+      - name: run build script
+        run: npm run build
