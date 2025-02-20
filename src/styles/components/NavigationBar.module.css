@@ -1,0 +1,8 @@
+.linksList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-style: solid;
+  border-color: var(--section-box);
+  list-style: none;
+}

@@ -1,12 +1,11 @@
 import React from "react";
 import styles from "@/styles/components/AboutMe.module.css";
-import Image from "next/image";
 
 const AboutMeSection: React.FC = () => {
   return (
     <div className={styles.aboutMe}>
       <h2>whoami</h2>
-      <Image src="/profilepic.jpg" alt="very cool and epic profile picture"></Image>
+      <img src="/profilepic.jpg" alt="very cool and epic profile picture" />
       <p>Hi! I am Yukiko and welcome to my site</p>
       <p>I have many interests, which include:</p>
       <ul>
@@ -16,7 +15,7 @@ const AboutMeSection: React.FC = () => {
         <li>alternative fashion</li>
         <li>internet and irl subcultures</li>
       </ul>
-    </div>
+    </div >
   );
 };
 
