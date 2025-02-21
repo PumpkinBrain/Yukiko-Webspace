@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      -env:
-        NEOCITIES_KEY: {{ secrets.NEOCITIES_KEY }}
       - name: checkout code
         uses: actions/checkout@v4
       - name: set up code
@@ -20,5 +18,8 @@ jobs:
       - name: run build script
         run: npm run build
       - name: upload folder
-        run: curl -H "Authorization: Bearer $NEOCITIES_KEY" \
-https://neocities.org/api/info
+        env:
+          NEOCITIES_KEY: {{ secrets.NEOCITIES_KEY }}
+        run: |
+          curl -H "Authorization: Bearer $NEOCITIES_KEY" \
+            https://neocities.org/api/info
