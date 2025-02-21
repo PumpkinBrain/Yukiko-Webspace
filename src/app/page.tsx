@@ -5,6 +5,7 @@ import UpdatesAndTodos from "@/components/sections/UpdatesAndTodos";
 import "@/styles/globals.css";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
+import NavigationBar from "@/components/sections/NavigationBar";
 
 export default function Home() {
   const pageTitle = "\\.:THE Yukiko-Webspace.:/";
@@ -39,8 +40,10 @@ export default function Home() {
       <h1>{matrixText}</h1>
       <div className={styles.sections}>
         <AboutMeSection />
-        <h2 style={{ flex: 1 }}>Links navbar</h2>
-        <BlogsSection />
+        <div className={styles.middleSection}>
+          <NavigationBar />
+          <BlogsSection />
+        </div>
         <UpdatesAndTodos />
       </div>
     </div >
