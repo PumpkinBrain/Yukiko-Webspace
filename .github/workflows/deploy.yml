@@ -19,7 +19,7 @@ jobs:
         run: npm run build
       - name: upload folder
         env:
-          NEOCITIES_KEY: {{ secrets.NEOCITIES_KEY }}
+          NEOCITIES_KEY: ${{ secrets.NEOCITIES_KEY }}
         run: |
           curl -H "Authorization: Bearer $NEOCITIES_KEY" \
             https://neocities.org/api/info
