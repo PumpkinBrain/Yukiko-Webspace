@@ -1,0 +1,18 @@
+#!/bin/bash
+upload() {
+  curl -H "Authorization: Bearer $NEOCITIES" \
+    -F "${1#*/}=@$1" "https://neocities.org/api/upload"
+}
+
+run_files() {
+  for file in "$1"/*; do
+    if [ -d "$file" ]; then
+      run_files $file
+    else
+      echo $file
+      upload $file
+    fi
+  done
+}
+
+run_files dist
