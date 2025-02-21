@@ -21,5 +21,4 @@ jobs:
         env:
           NEOCITIES_KEY: ${{ secrets.NEOCITIES_KEY }}
         run: |
-          curl -H "Authorization: Bearer $NEOCITIES_KEY" \
-          -F "build/=@dist/" "https://neocities.org/api/upload"
+          ./infra/upload-website.sh
