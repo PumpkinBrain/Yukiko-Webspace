@@ -22,4 +22,4 @@ jobs:
           NEOCITIES_KEY: ${{ secrets.NEOCITIES_KEY }}
         run: |
           curl -H "Authorization: Bearer $NEOCITIES_KEY" \
-            https://neocities.org/api/info
+          -F "./dist/=@local/" "https://neocities.org/api/upload"
