@@ -6,7 +6,7 @@ const AboutMeSection: React.FC = () => {
     <div className={styles.aboutMe}>
       <h2>whoami</h2>
       <img src="/profilepic.jpg" alt="very cool and epic profile picture" />
-      <p>Hi! I am Yukiko and welcome to my site</p>
+      <p>Hi! I am Yukiko and welcome to my little corner on the web</p>
       <p>I have many interests, which include:</p>
       <ul>
         <li>programming and hacking</li>

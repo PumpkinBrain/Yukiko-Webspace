@@ -1,10 +1,19 @@
 .blogList{
-    flex: 1
+    flex: 1;
+    border-color: var(--section-box);
+    border-style: solid;
+    padding: 2em;
+    margin-top: 1em;
+}
+
+.blogList h2 {
+  margin-bottom: 1em;
 }
 
 .blogListItem{
     background-color: #212121;
-    border-radius: 1px;
     border-style: solid;
     border-color: var(--section-box);
+    list-style: none;
+    padding: 0.5em;
 }

@@ -5,9 +5,10 @@ const NavigationBar: React.FC = () => {
   return (
     <div>
       <ul className={styles.linksList}>
-        <li><a>link one</a></li>
-        <li><a>link one</a></li>
-        <li><a>link one</a></li>
+        <a href="">Home</a>
+        <a href="">Portifolio</a>
+        <a href="">Save The Internet!</a>
+        <a href="">Other sites for you</a>
       </ul>
     </div>
   )
