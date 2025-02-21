@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      -env:
+      env:
         NEOCITIES_KEY: {{ secrets.NEOCITIES_KEY }}
       - name: checkout code
         uses: actions/checkout@v4
