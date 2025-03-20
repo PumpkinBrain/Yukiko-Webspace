@@ -15,8 +15,18 @@ const LandingPage: React.FC = () => {
                 doomscrolling through social media so I decided
                 to make this little place so I can yap about my
                 interests</p>
-              <Container className="border border-2">
-                blinkies hier!
+              <Container className="p-0">
+                <Row>
+                  <Col>
+                    <a href='https://blinkies.cafe' target='_blank'><img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!' /></a>
+                    <a href="https://koshka.love"><img src="https://koshka.love/Koshkabutton.gif.pagespeed.ce.uEPsov_WG4.gif" /></a>
+                  </Col>
+                  <Col>
+                    <a href='https://neo-neighborhoods.neocities.org/Petsburgh/'><img src='https://neo-neighborhoods.neocities.org/Petsburgh/petsburgh88.gif' alt='petsburgh.neocities | make your own blinkies!' /></a>
+                    <a href="https://neocities.org"><img src="https://sparklelobster.neocities.org/neocities.gif" /></a>
+                  </Col>
+                </Row>
+                <img src="img/blinkies/blinkiesCafe-bH.gif" />
               </Container>
             </div>
           </Container>
