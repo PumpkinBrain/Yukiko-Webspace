@@ -1,0 +1,14 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+// Override Bootstrap variables
+/*
+$primary: #e43193; // Custom primary color
+$dark: #121212;    // Dark theme background
+$body-bg: $dark;
+$body-color: #fff;
+*/
+
+// Import Bootstrap components
+@import "bootstrap/scss/bootstrap";
+
