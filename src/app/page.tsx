@@ -38,10 +38,10 @@ const LandingPage: React.FC = () => {
             </Container>
           </Row>
           <Row>
-            <Container className="border border-4 bg-light mb-3 pl-5 pr-5 pt-2 pb-3">
-              <h2 className="text-center">Welcome, webspace traveler, to my little corner of the web.
+            <Container className="border border-4 bg-light mb-3 p-4">
+              <h3 className="text-center">Welcome, webspace traveler, to my little corner of the web.
                 We have coffee, weirdness and all things cute and macabre.
-                <p>✨Enjoy your stay✨</p></h2>
+                <p>✨Enjoy your stay✨</p></h3>
               <Container className="d-flex justify-content-between">
                 <img src="img/mana.png" className="chibi" />
                 <img src="img/miku.png" className="chibi" />
@@ -51,12 +51,23 @@ const LandingPage: React.FC = () => {
           <Row>
             <Container className="border border-4 bg-light text-center">
               <h2 className="sub-title">My blog posts</h2>
+              <p>coming soon...</p>
             </Container>
           </Row>
         </Col>
         <Col md="3" className="mt-5">
-          <Container className="border bg-light border-4">
+          <Container className="border bg-light border-4 p-4">
             <h2 className="sub-title text-center">Logs</h2>
+            <h4>mar. 20th</h4>
+            <p>redesign.... again... it looks a LOT better now tho, I'm happy with it.
+              I guess messing around with figma and reactstrap was worth it after all</p>
+          </Container>
+          <Container className="border bg-light border-4 p-4">
+            <h2 className="sub-title text-center">Todos</h2>
+            <p>fix responsiveness for phone</p>
+            <p>blog posting system (finally)</p>
+            <p>portifolio page and think of some small project</p>
+            <p>show friends :)</p>
           </Container>
         </Col>
       </Row>
