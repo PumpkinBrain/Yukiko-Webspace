@@ -5,7 +5,7 @@ const LandingPage: React.FC = () => {
   return (
     <div className="text-light vh-100 p-3">
       <Row>
-        <Col md="3" className="mt-5">
+        <Col className="mt-5">
           <Container className="border border-4 p-4 bg-light">
             <div className="d-flex flex-column align-items-center">
               <h2 className="text-center sub-title">Whoami</h2>
@@ -21,7 +21,7 @@ const LandingPage: React.FC = () => {
             </div>
           </Container>
         </Col>
-        <Col md="6">
+        <Col md="7">
           <Row>
             <Col className="text-center text-light pb-3">
               <h1>\.:THE Yukiko Webspace:./</h1>
@@ -55,7 +55,7 @@ const LandingPage: React.FC = () => {
             </Container>
           </Row>
         </Col>
-        <Col md="3" className="mt-5">
+        <Col className="mt-5">
           <Container className="border bg-light border-4 p-4">
             <h2 className="sub-title text-center">Logs</h2>
             <h4>mar. 20th</h4>
