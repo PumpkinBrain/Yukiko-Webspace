@@ -1,14 +1,32 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 // Override Bootstrap variables
-/*
 $primary: #e43193; // Custom primary color
-$dark: #121212;    // Dark theme background
+$dark: #060606;
+$light: #D9D9D9;
+$white-opaque: rgba(217, 217, 217, 0.10);
+
 $body-bg: $dark;
-$body-color: #fff;
-*/
+$border-color: $primary;
 
 // Import Bootstrap components
 @import "bootstrap/scss/bootstrap";
 
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-light{
+  color: $light !important;
+}
+.bg-light{
+  background-color: $white-opaque !important;
+}
+
+h1, h2{
+  font-family: "Pacifico", cursive;
+}
