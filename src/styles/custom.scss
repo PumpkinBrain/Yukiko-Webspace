@@ -1,11 +1,13 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Pacifico&display=swap');
 
 // Override Bootstrap variables
 $primary: #e43193; // Custom primary color
 $dark: #060606;
 $light: #D9D9D9;
+$purple: #9B3D91;
 $white-opaque: rgba(217, 217, 217, 0.10);
 
 $body-bg: $dark;
@@ -20,13 +22,32 @@ $border-color: $primary;
   font-style: normal;
 }
 
+body{
+  font-family: "Akaya Telivigala", system-ui;
+  background-image: url('../../public/img/bg.png')
+}
+a{
+  color: $primary;
+}
+a:hover{
+  color: $purple;
+  box-shadow: 0px 0px 10px $purple;
+}
+h1, h2{
+  font-family: "Pacifico", cursive;
+}
+
 .text-light{
   color: $light !important;
 }
 .bg-light{
   background-color: $white-opaque !important;
 }
-
-h1, h2{
-  font-family: "Pacifico", cursive;
+.sub-title{
+  color: $purple;
 }
+.chibi{
+  margin-top: -10%;
+  width:10%;
+}
+

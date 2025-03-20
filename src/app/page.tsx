@@ -6,9 +6,9 @@ const LandingPage: React.FC = () => {
     <div className="text-light vh-100 p-3">
       <Row>
         <Col md="3" className="mt-5">
-          <Container className="border border-5 p-4 bg-light">
+          <Container className="border border-4 p-4 bg-light">
             <div className="d-flex flex-column align-items-center">
-              <h2 className="text-center">Whoami</h2>
+              <h2 className="text-center sub-title">Whoami</h2>
               <img src="img/profilepic.jpg" className="w-50 h-auto mb-3 mt-3" />
               <p className="text-center">I am yukiko, a young person who enjoys all things
                 internet and alternative. I was kinda bored of
@@ -28,31 +28,35 @@ const LandingPage: React.FC = () => {
             </Col>
           </Row>
           <Row>
-            <Container className="border border-5">
+            <Container className="border border-4 bg-light mb-3">
               <Navbar>
-                <a>Home</a>
-                <a>Portifolio</a>
-                <a>Save the internet!</a>
-                <a>Other links</a>
+                <a href="">Home</a>
+                <a href="">Portifolio</a>
+                <a href="">Save the internet!</a>
+                <a href="">Other links</a>
               </Navbar>
             </Container>
           </Row>
           <Row>
-            <Container className="border border-5">
+            <Container className="border border-4 bg-light mb-3 pl-5 pr-5 pt-2 pb-3">
               <h2 className="text-center">Welcome, webspace traveler, to my little corner of the web.
                 We have coffee, weirdness and all things cute and macabre.
                 <p>✨Enjoy your stay✨</p></h2>
+              <Container className="d-flex justify-content-between">
+                <img src="img/mana.png" className="chibi" />
+                <img src="img/miku.png" className="chibi" />
+              </Container>
             </Container>
           </Row>
           <Row>
-            <Container className="border border-5 text-center">
-              <h2>My blog posts</h2>
+            <Container className="border border-4 bg-light text-center">
+              <h2 className="sub-title">My blog posts</h2>
             </Container>
           </Row>
         </Col>
         <Col md="3" className="mt-5">
-          <Container className="border border-5">
-            <h2>logs</h2>
+          <Container className="border bg-light border-4">
+            <h2 className="sub-title text-center">Logs</h2>
           </Container>
         </Col>
       </Row>
