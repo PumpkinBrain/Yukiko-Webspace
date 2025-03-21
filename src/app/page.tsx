@@ -1,51 +1,88 @@
-"use client";
-import AboutMeSection from "@/components/sections/AboutMe";
-import BlogsSection from "@/components/sections/Blogs";
-import UpdatesAndTodos from "@/components/sections/UpdatesAndTodos";
-import "@/styles/globals.css";
-import styles from "./page.module.css";
-import { useEffect, useState } from "react";
-import NavigationBar from "@/components/sections/NavigationBar";
+import React from "react";
+import { Col, Container, Navbar, Row } from "reactstrap";
 
-export default function Home() {
-  const pageTitle = "\\.:THE Yukiko-Webspace.:/";
-  const [matrixText, setMatrixText] = useState(pageTitle);
-
-  useEffect(() => {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
-    const targetText = pageTitle;
-    let iteration = 0;
-
-    const interval = setInterval(() => {
-      setMatrixText((prev) =>
-        prev
-          .split("")
-          .map((_char, index) =>
-            index < iteration
-              ? targetText[index]
-              : chars[Math.floor(Math.random() * chars.length)]
-          )
-          .join("")
-      );
-
-      if (iteration >= targetText.length) clearInterval(interval);
-      iteration++;
-    }, 150); // Speed of the effect
-
-    return () => clearInterval(interval);
-  }, []);
-
+const LandingPage: React.FC = () => {
   return (
-    <div className={styles.main}>
-      <h1>{matrixText}</h1>
-      <div className={styles.sections}>
-        <AboutMeSection />
-        <div className={styles.middleSection}>
-          <NavigationBar />
-          <BlogsSection />
-        </div>
-        <UpdatesAndTodos />
-      </div>
-    </div >
-  );
+    <div className="text-light vh-100 p-3">
+      <Row>
+        <Col className="mt-5">
+          <Container className="border border-4 p-4 bg-light">
+            <div className="d-flex flex-column align-items-center">
+              <h2 className="text-center sub-title">Whoami</h2>
+              <img src="img/profilepic.jpg" className="w-50 h-auto mb-3 mt-3" />
+              <p className="text-center">I am yukiko, a young person who enjoys all things
+                internet and alternative. I was kinda bored of
+                doomscrolling through social media so I decided
+                to make this little place so I can yap about my
+                interests</p>
+              <Container className="p-0">
+                <Row>
+                  <Col>
+                    <a href='https://blinkies.cafe' target='_blank'><img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!' /></a>
+                    <a href="https://koshka.love"><img src="https://koshka.love/Koshkabutton.gif.pagespeed.ce.uEPsov_WG4.gif" /></a>
+                  </Col>
+                  <Col>
+                    <a href='https://neo-neighborhoods.neocities.org/Petsburgh/'><img src='https://neo-neighborhoods.neocities.org/Petsburgh/petsburgh88.gif' alt='petsburgh.neocities | make your own blinkies!' /></a>
+                    <a href="https://neocities.org"><img src="https://sparklelobster.neocities.org/neocities.gif" /></a>
+                  </Col>
+                </Row>
+                <img src="img/blinkies/blinkiesCafe-bH.gif" />
+              </Container>
+            </div>
+          </Container>
+        </Col>
+        <Col md="7">
+          <Row>
+            <Col className="text-center text-light pb-3">
+              <h1>\.:THE Yukiko Webspace:./</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Container className="border border-4 bg-light mb-3">
+              <Navbar>
+                <a href="">Home</a>
+                <a href="">Portifolio</a>
+                <a href="">Save the internet!</a>
+                <a href="">Other links</a>
+              </Navbar>
+            </Container>
+          </Row>
+          <Row>
+            <Container className="border border-4 bg-light mb-3 p-4">
+              <h3 className="text-center">Welcome, webspace traveler, to my little corner of the web.
+                We have coffee, weirdness and all things cute and macabre.
+                <p>✨Enjoy your stay✨</p></h3>
+              <Container className="d-flex justify-content-between">
+                <img src="img/mana.png" className="chibi" />
+                <img src="img/miku.png" className="chibi" />
+              </Container>
+            </Container>
+          </Row>
+          <Row>
+            <Container className="border border-4 bg-light text-center">
+              <h2 className="sub-title">My blog posts</h2>
+              <p>coming soon...</p>
+            </Container>
+          </Row>
+        </Col>
+        <Col className="mt-5">
+          <Container className="border bg-light border-4 p-4">
+            <h2 className="sub-title text-center">Logs</h2>
+            <h4>mar. 20th</h4>
+            <p>redesign.... again... it looks a LOT better now tho, I'm happy with it.
+              I guess messing around with figma and reactstrap was worth it after all</p>
+          </Container>
+          <Container className="border bg-light border-4 p-4">
+            <h2 className="sub-title text-center">Todos</h2>
+            <p>fix responsiveness for phone</p>
+            <p>blog posting system (finally)</p>
+            <p>portifolio page and think of some small project</p>
+            <p>show friends :)</p>
+          </Container>
+        </Col>
+      </Row>
+    </div>
+  )
 }
+
+export default LandingPage;
