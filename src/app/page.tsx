@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Col, Container, Navbar, Row } from "reactstrap";
 
 const LandingPage: React.FC = () => {
@@ -9,7 +10,7 @@ const LandingPage: React.FC = () => {
           <Container className="border border-4 p-4 bg-light">
             <div className="d-flex flex-column align-items-center">
               <h2 className="text-center sub-title">Whoami</h2>
-              <img src="img/profilepic.jpg" className="w-50 h-auto mb-3 mt-3" />
+              <Image src="img/profilepic.jpg" alt="a profile picture" className="w-50 h-auto mb-3 mt-3" />
               <p className="text-center">I am yukiko, a young person who enjoys all things
                 internet and alternative. I was kinda bored of
                 doomscrolling through social media so I decided
@@ -18,15 +19,15 @@ const LandingPage: React.FC = () => {
               <Container className="p-0">
                 <Row>
                   <Col>
-                    <a href='https://blinkies.cafe' target='_blank'><img src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!' /></a>
-                    <a href="https://koshka.love"><img src="https://koshka.love/Koshkabutton.gif.pagespeed.ce.uEPsov_WG4.gif" /></a>
+                    <a href='https://blinkies.cafe' target='_blank'><Image src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!' /></a>
+                    <a href="https://koshka.love"><Image src="https://koshka.love/Koshkabutton.gif.pagespeed.ce.uEPsov_WG4.gif" alt="koshka.love" /></a>
                   </Col>
                   <Col>
-                    <a href='https://neo-neighborhoods.neocities.org/Petsburgh/'><img src='https://neo-neighborhoods.neocities.org/Petsburgh/petsburgh88.gif' alt='petsburgh.neocities | make your own blinkies!' /></a>
-                    <a href="https://neocities.org"><img src="https://sparklelobster.neocities.org/neocities.gif" /></a>
+                    <a href='https://neo-neighborhoods.neocities.org/Petsburgh/'><Image src='https://neo-neighborhoods.neocities.org/Petsburgh/petsburgh88.gif' alt='petsburgh.neocities | make your own blinkies!' /></a>
+                    <a href="https://neocities.org"><Image src="https://sparklelobster.neocities.org/neocities.gif" alt="neocities.org" /></a>
                   </Col>
                 </Row>
-                <img src="img/blinkies/blinkiesCafe-bH.gif" />
+                <Image src="img/blinkies/blinkiesCafe-bH.gif" alt="" />
               </Container>
             </div>
           </Container>
@@ -53,8 +54,8 @@ const LandingPage: React.FC = () => {
                 We have coffee, weirdness and all things cute and macabre.
                 <p>✨Enjoy your stay✨</p></h3>
               <Container className="d-flex justify-content-between">
-                <img src="img/mana.png" className="chibi" />
-                <img src="img/miku.png" className="chibi" />
+                <Image src="img/mana.png" className="chibi" alt="" />
+                <Image src="img/miku.png" className="chibi" alt="" />
               </Container>
             </Container>
           </Row>
@@ -69,7 +70,7 @@ const LandingPage: React.FC = () => {
           <Container className="border bg-light border-4 p-4">
             <h2 className="sub-title text-center">Logs</h2>
             <h4>mar. 20th</h4>
-            <p>redesign.... again... it looks a LOT better now tho, I'm happy with it.
+            <p>redesign.... again... it looks a LOT better now tho, I&aposm happy with it.
               I guess messing around with figma and reactstrap was worth it after all</p>
           </Container>
           <Container className="border bg-light border-4 p-4">
