@@ -69,6 +69,8 @@ const LandingPage: React.FC = () => {
         <Col className="mt-5">
           <Container className="border bg-light border-4 p-4">
             <h2 className="sub-title text-center">Logs</h2>
+            <h4>mar. 28th</h4>
+            <p>Fixed cd pipeline</p>
             <h4>mar. 20th</h4>
             <p>redesign.... again... it looks a LOT better now tho, I&apos;m happy with it.
               I guess messing around with figma and reactstrap was worth it after all</p>
