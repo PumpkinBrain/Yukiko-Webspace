@@ -14,6 +14,9 @@ getFiles() {
 
   string=""
   while IFS= read -r file; do
+    if [[ "$file" == "index.html" ]]; then
+      continue
+    fi
     string="$string -d \"filenames[]=$file\""
   done <<<"$paths"
   echo "$string"
@@ -27,17 +30,16 @@ clearProject() {
 }
 
 run_files() {
-  clearProject
-
-  #echo "uploading new files..."
-  #for file in "$1"/*; do
-  #  if [ -d "$file" ]; then
-  #    run_files $file
-  #  else
-  #    echo $file
-  #    upload $file
-  #  fi
-  #done
+  echo "uploading new files..."
+  for file in "$1"/*; do
+    if [ -d "$file" ]; then
+      run_files $file
+    else
+      echo $file
+      upload $file
+    fi
+  done
 }
 
+clearProject
 run_files dist
