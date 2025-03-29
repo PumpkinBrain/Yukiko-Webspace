@@ -6,6 +6,21 @@ const LandingPage: React.FC = () => {
   return (
     <div className="text-light vh-100 p-3">
       <Row>
+        <Col className="text-center text-light pb-3 d-block d-md-none">
+          <h1>\.:THE Yukiko Webspace:./</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Container className="border border-4 bg-light mb-3 d-block d-md-none">
+          <Navbar>
+            <a href="">Home</a>
+            <a href="">Portifolio</a>
+            <a href="">Save the internet!</a>
+            <a href="">Other links</a>
+          </Navbar>
+        </Container>
+      </Row>
+      <Row>
         <Col className="mt-5">
           <Container className="border border-4 p-4 bg-light">
             <div className="d-flex flex-column align-items-center">
@@ -34,12 +49,12 @@ const LandingPage: React.FC = () => {
         </Col>
         <Col md="7">
           <Row>
-            <Col className="text-center text-light pb-3">
+            <Col className="text-center text-light pb-3 d-none d-md-block">
               <h1>\.:THE Yukiko Webspace:./</h1>
             </Col>
           </Row>
           <Row>
-            <Container className="border border-4 bg-light mb-3">
+            <Container className="border border-4 bg-light mb-3 d-none d-md-block">
               <Navbar>
                 <a href="">Home</a>
                 <a href="">Portifolio</a>
