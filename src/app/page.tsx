@@ -1,68 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import { Col, Container, Navbar, Row } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
+import TitleNav from "@/components/landingpage/TitleNav";
+import Whoami from "@/components/landingpage/Whoami";
 
 const LandingPage: React.FC = () => {
   return (
     <div className="text-light vh-100 p-3">
+      <TitleNav displayClasses="d-block d-md-none" />
       <Row>
-        <Col className="text-center text-light pb-3 d-block d-md-none">
-          <h1>\.:THE Yukiko Webspace:./</h1>
+        <Col className="d-none d-md-block mt-5" md="3">
+          <Whoami />
         </Col>
-      </Row>
-      <Row>
-        <Container className="border border-4 bg-light mb-3 d-block d-md-none">
-          <Navbar>
-            <a href="">Home</a>
-            <a href="">Portifolio</a>
-            <a href="">Save the internet!</a>
-            <a href="">Other links</a>
-          </Navbar>
-        </Container>
-      </Row>
-      <Row>
-        <Col className="mt-5">
-          <Container className="border border-4 p-4 bg-light">
-            <div className="d-flex flex-column align-items-center">
-              <h2 className="text-center sub-title">Whoami</h2>
-              <Image width={0} height={0} src="img/profilepic.jpg" alt="a profile picture" className="w-50 h-auto mb-3 mt-3" />
-              <p className="text-center">I am yukiko, a young person who enjoys all things
-                internet and alternative. I was kinda bored of
-                doomscrolling through social media so I decided
-                to make this little place so I can yap about my
-                interests</p>
-              <Container className="p-0">
-                <Row>
-                  <Col>
-                    <a href='https://blinkies.cafe' target='_blank'><Image width={0} height={0} className="w-100 h-auto" src='https://blinkies.cafe/b/display/blinkiesCafe-badge.gif' alt='blinkies.cafe | make your own blinkies!' /></a>
-                    <a href="https://koshka.love"><Image width={0} height={0} className="w-100 h-auto" src="https://koshka.love/Koshkabutton.gif.pagespeed.ce.uEPsov_WG4.gif" alt="koshka.love" /></a>
-                  </Col>
-                  <Col>
-                    <a href='https://neo-neighborhoods.neocities.org/Petsburgh/'><Image width={0} height={0} className="w-100 h-auto" src='https://neo-neighborhoods.neocities.org/Petsburgh/petsburgh88.gif' alt='petsburgh.neocities | make your own blinkies!' /></a>
-                    <a href="https://neocities.org"><Image width={0} height={0} className="w-100 h-auto" src="https://sparklelobster.neocities.org/neocities.gif" alt="neocities.org" /></a>
-                  </Col>
-                </Row>
-                <Image width={0} height={0} className="w-100 h-auto" src="img/blinkies/blinkiesCafe-bH.gif" alt="" />
-              </Container>
-            </div>
-          </Container>
-        </Col>
-        <Col md="7">
-          <Row>
-            <Col className="text-center text-light pb-3 d-none d-md-block">
-              <h1>\.:THE Yukiko Webspace:./</h1>
-            </Col>
-          </Row>
-          <Row>
-            <Container className="border border-4 bg-light mb-3 d-none d-md-block">
-              <Navbar>
-                <a href="">Home</a>
-                <a href="">Portifolio</a>
-                <a href="">Save the internet!</a>
-                <a href="">Other links</a>
-              </Navbar>
-            </Container>
-          </Row>
+        <Col md="6" className="px-4 p-md-2">
+          <TitleNav displayClasses="d-none d-md-block" />
           <Row>
             <Container className="border border-4 bg-light mb-3 p-4">
               <h3 className="text-center">Welcome, webspace traveler, to my little corner of the web.
@@ -81,7 +32,10 @@ const LandingPage: React.FC = () => {
             </Container>
           </Row>
         </Col>
-        <Col className="mt-5">
+        <Col className="d-block d-md-none mt-5" md="3">
+          <Whoami />
+        </Col>
+        <Col className="mt-5" md="3">
           <Container className="border bg-light border-4 p-4">
             <h2 className="sub-title text-center">Logs</h2>
             <h4>mar. 28th</h4>
