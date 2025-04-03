@@ -1,4 +1,4 @@
-cd ../public/
+cd public/
 destination=data/posts.json
 
 echo "" >$destination
