@@ -8,3 +8,4 @@
 [metadata.title]:# "Test the new bloging system"
 [metadata.tag]:# "test"
 [metadata.date]:# "2025-04-03"
+[metadata.description]:# "Description text for test blog post a"

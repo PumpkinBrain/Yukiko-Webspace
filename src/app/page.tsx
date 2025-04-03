@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Col, Container, Row } from "reactstrap";
 import TitleNav from "@/ui/components/landingpage/TitleNav";
 import Whoami from "@/ui/components/landingpage/Whoami";
+import data from "../../public/data/posts.json"
+import BlogPost from "@/domain/entities/BlogPost";
 
 const LandingPage: React.FC = () => {
   return (
@@ -29,24 +31,18 @@ const LandingPage: React.FC = () => {
             <Container className="border border-4 bg-light text-center p-2">
               <h2 className="sub-title">My blog posts</h2>
               <p>check out my blog articles!</p>
-              <Container className="bg-light p-1 mb-1">
-                <a href=""><h3>Blog Title</h3></a>
-                dd/mm/yy - category
-                <br />
-                small description of the subject talked about in this blog post :3, it talks about a lot of stuff, make sure to read it!
-              </Container>
-              <Container className="bg-light p-1 mb-1">
-                <a href=""><h3>Blog Title</h3></a>
-                dd/mm/yy - category
-                <br />
-                small description of the subject talked about in this blog post :3, it talks about a lot of stuff, make sure to read it!
-              </Container>
-              <Container className="bg-light p-1 mb-1">
-                <a href=""><h3>Blog Title</h3></a>
-                dd/mm/yy - category
-                <br />
-                small description of the subject talked about in this blog post :3, it talks about a lot of stuff, make sure to read it!
-              </Container>
+              {
+                data.map((post: BlogPost) => {
+                  return (
+                    <Container className="bg-light p-1 mb-1">
+                      <a href=""><h3>{post.title}</h3></a>
+                      {post.date} - {post.tag}
+                      <br />
+                      {post.description}
+                    </Container>
+                  )
+                })
+              }
             </Container>
           </Row>
         </Col>
