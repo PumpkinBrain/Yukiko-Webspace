@@ -1,7 +1,7 @@
 import { Col, Container, Navbar, Row } from "reactstrap"
 
 interface Props {
-  displayClasses?: string
+  displayClasses: string
 }
 const TitleNav: React.FC<Props> = (props: Props) => {
   return (

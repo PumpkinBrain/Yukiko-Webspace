@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Col, Container, Row } from "reactstrap";
-import TitleNav from "@/components/landingpage/TitleNav";
-import Whoami from "@/components/landingpage/Whoami";
+import TitleNav from "@/ui/components/landingpage/TitleNav";
+import Whoami from "@/ui/components/landingpage/Whoami";
 
 const LandingPage: React.FC = () => {
   return (
@@ -26,9 +26,27 @@ const LandingPage: React.FC = () => {
             </Container>
           </Row>
           <Row>
-            <Container className="border border-4 bg-light text-center">
+            <Container className="border border-4 bg-light text-center p-2">
               <h2 className="sub-title">My blog posts</h2>
-              <p>coming soon...</p>
+              <p>check out my blog articles!</p>
+              <Container className="bg-light p-1 mb-1">
+                <a href=""><h3>Blog Title</h3></a>
+                dd/mm/yy - category
+                <br />
+                small description of the subject talked about in this blog post :3, it talks about a lot of stuff, make sure to read it!
+              </Container>
+              <Container className="bg-light p-1 mb-1">
+                <a href=""><h3>Blog Title</h3></a>
+                dd/mm/yy - category
+                <br />
+                small description of the subject talked about in this blog post :3, it talks about a lot of stuff, make sure to read it!
+              </Container>
+              <Container className="bg-light p-1 mb-1">
+                <a href=""><h3>Blog Title</h3></a>
+                dd/mm/yy - category
+                <br />
+                small description of the subject talked about in this blog post :3, it talks about a lot of stuff, make sure to read it!
+              </Container>
             </Container>
           </Row>
         </Col>
