@@ -1,4 +1,4 @@
-import "@/styles/custom.scss"
+import "@/ui/styles/custom.scss"
 
 export const metadata = {
   title: '~Yukiko Webspace~',
