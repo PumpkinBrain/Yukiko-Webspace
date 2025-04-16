@@ -54,7 +54,7 @@ const LandingPage: React.FC = () => {
             <h2 className="sub-title text-center">Logs</h2>
             <h4>apr. 16th</h4>
             <p>So the app router made me struggle to do the static export with dynmic routes
-              so now I'm moving over to the pages router</p>
+              so now I&apos;m moving over to the pages router</p>
             <h4>mar. 28th</h4>
             <p>Fixed cd pipeline</p>
             <h4>mar. 20th</h4>
