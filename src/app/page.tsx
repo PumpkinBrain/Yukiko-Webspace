@@ -35,7 +35,7 @@ const LandingPage: React.FC = () => {
                 data.map((post: BlogPost) => {
                   return (
                     <Container className="bg-light p-1 mb-1" key={post.file}>
-                      <a href={`/read/${post.tag}`}><h3>{post.title}</h3></a>
+                      <a href={`/read/${post.id}`}><h3>{post.title}</h3></a>
                       {post.date} - {post.tag}
                       <br />
                       {post.description}
