@@ -14,7 +14,7 @@ const TitleNav: React.FC<Props> = (props: Props) => {
       <Row>
         <Container className={`border border-4 bg-light mb-3 ${props.displayClasses}`}>
           <Navbar>
-            <a href="">Home</a>
+            <a href="/">Home</a>
             <a href="">Portifolio</a>
             <a href="">Save the internet!</a>
             <a href="">Other links</a>

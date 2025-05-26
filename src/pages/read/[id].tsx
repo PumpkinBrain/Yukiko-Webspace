@@ -1,27 +1,42 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../layout';
 import data from "../../../public/data/posts.json"
 import BlogPost from '@/domain/entities/BlogPost';
+import { Col, Container, Row } from 'reactstrap';
+import TitleNav from '@/ui/components/landingpage/TitleNav';
+import Markdown from 'react-markdown';
 
-interface props {
-  id: number;
+interface Iprops {
+  postData: BlogPost;
+  postText: string;
 }
 interface Iparam {
   params: {
     id: string
   }
 }
+const ReadingPage: React.FC<Iprops> = (props: Iprops) => {
 
-const ReadingPage: React.FC<props> = (props: props) => {
-  if (!props.id) {
-    return <p>loading...</p>
-  }
   return (
-    <Layout>
-      <h1>Hello world!</h1>
-      <p>reading id {props.id}</p>
-      <h1>{props.id}</h1>
-    </Layout>
+    < Layout >
+      <Col className='mx-5'>
+        <Row className='text-light px-4 mt-5'>
+          <Col>
+            <TitleNav displayClasses='' />
+            <Row>
+              <Container className='bg-light'>
+                <Col>
+                  <h2 className='sub-title text-center'>{props.postData.title}</h2>
+                  <p className='sub-title text-center'>{props.postData.description}</p>
+                </Col>
+                <p className='text-center'>content</p>
+                <Markdown>{props.postText}</Markdown>
+              </Container>
+            </Row>
+          </Col>
+        </Row>
+      </Col>
+    </Layout >
   )
 }
 
@@ -33,7 +48,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: Iparam) {
-  return { props: { id: params.id } }
+  const selectedPostData = data.find((post: BlogPost) => post.id.toString() === params.id);
+  const response = await fetch("https://raw.githubusercontent.com/DanielMendes42/DanielMendes42/refs/heads/main/README.md");
+  const text = await response.text();
+  return { props: { postData: selectedPostData, postText: text } }
 }
 
 
