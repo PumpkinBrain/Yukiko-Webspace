@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import Layout from '../layout';
 import data from "../../../public/data/posts.json"
 import BlogPost from '@/domain/entities/BlogPost';

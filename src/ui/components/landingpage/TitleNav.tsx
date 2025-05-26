@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Col, Container, Navbar, Row } from "reactstrap"
 
 interface Props {
@@ -14,7 +15,7 @@ const TitleNav: React.FC<Props> = (props: Props) => {
       <Row>
         <Container className={`border border-4 bg-light mb-3 ${props.displayClasses}`}>
           <Navbar>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
             <a href="">Portifolio</a>
             <a href="">Save the internet!</a>
             <a href="">Other links</a>
