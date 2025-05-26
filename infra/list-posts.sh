@@ -15,7 +15,7 @@ for file in blogs/*; do
   \"title\": $title,
   \"tag\": $tag,
   \"date\": $date,
-  \"file\": \"$file\",
+  \"file\": \"/$file\",
   \"description\": $description
 }," >>$destination
   ID=$(($ID + 1))
