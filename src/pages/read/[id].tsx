@@ -4,6 +4,7 @@ import BlogPost from '@/domain/entities/BlogPost';
 import { Col, Container, Row } from 'reactstrap';
 import TitleNav from '@/ui/components/landingpage/TitleNav';
 import Markdown from 'react-markdown';
+import Head from 'next/head';
 
 interface Iprops {
   postData: BlogPost;
@@ -17,26 +18,31 @@ interface Iparam {
 const ReadingPage: React.FC<Iprops> = (props: Iprops) => {
 
   return (
-    < Layout >
-      <Col className='mx-5'>
-        <Row className='text-light px-4 mt-5'>
-          <Col>
-            <TitleNav displayClasses='' />
-            <Row>
-              <Container className='bg-light'>
-                <Col className='p-5'>
-                  <h2 className='sub-title text-center'>{props.postData.title}</h2>
-                  <p className='sub-title text-center'>{props.postData.description}</p>
-                  <Container className='px-5 py-2'>
-                    <Markdown>{props.postText}</Markdown>
-                  </Container>
-                </Col>
-              </Container>
-            </Row>
-          </Col>
-        </Row>
-      </Col>
-    </Layout >
+    <html>
+      <Head>
+        <title>{props.postData.title}</title>
+      </Head>
+      < Layout >
+        <Col className='mx-5'>
+          <Row className='text-light px-4 mt-5'>
+            <Col>
+              <TitleNav displayClasses='' />
+              <Row>
+                <Container className='bg-light'>
+                  <Col className='p-5'>
+                    <h1 className='text-center'>{props.postData.title}</h1>
+                    <p className='sub-title text-center'>{props.postData.description}</p>
+                    <Container className='px-5 py-2'>
+                      <Markdown>{props.postText}</Markdown>
+                    </Container>
+                  </Col>
+                </Container>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Layout >
+    </html>
   )
 }
 
