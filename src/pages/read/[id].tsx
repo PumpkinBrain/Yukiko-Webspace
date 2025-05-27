@@ -24,12 +24,13 @@ const ReadingPage: React.FC<Iprops> = (props: Iprops) => {
             <TitleNav displayClasses='' />
             <Row>
               <Container className='bg-light'>
-                <Col>
+                <Col className='p-5'>
                   <h2 className='sub-title text-center'>{props.postData.title}</h2>
                   <p className='sub-title text-center'>{props.postData.description}</p>
+                  <Container className='px-5 py-2'>
+                    <Markdown>{props.postText}</Markdown>
+                  </Container>
                 </Col>
-                <p className='text-center'>content</p>
-                <Markdown>{props.postText}</Markdown>
               </Container>
             </Row>
           </Col>
