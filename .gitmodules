@@ -1,0 +1,3 @@
+[submodule "Yukiko-Blogs"]
+	path = Yukiko-Blogs
+	url = git@github.com:PumpkinBrain/Yukiko-Blogs.git

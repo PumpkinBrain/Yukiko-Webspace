@@ -15,9 +15,6 @@ jobs:
         uses: actions/setup-node@v4
       - name: install dependencies
         run: npm install
-      - name: build blog listing
-        run: |
-          ./infra/list-posts.sh
       - name: run build script
         run: npm run build
       - name: upload folder
