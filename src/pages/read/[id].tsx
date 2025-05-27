@@ -48,7 +48,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: Iparam) {
   const selectedPostData = data.find((post: BlogPost) => post.id.toString() === params.id);
-  const response = await fetch("https://raw.githubusercontent.com/DanielMendes42/DanielMendes42/refs/heads/main/README.md");
+  const response = await fetch("https://raw.githubusercontent.com/PumpkinBrain/Yukiko-Webspace/refs/heads/main/README.md?token=GHSAT0AAAAAADESVRUWO6CXMGT4NTME3EXA2BVAZWQ");
   const text = await response.text();
   return { props: { postData: selectedPostData, postText: text } }
 }
